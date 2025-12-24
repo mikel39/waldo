@@ -1,0 +1,91 @@
+.game {
+    padding: 20px 0;
+}
+
+.bar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pfpContainer {
+    display: flex;
+    gap: 10px;
+}
+
+.pfpContainer img {
+    width: 40px;
+}
+
+.found {
+    filter: grayscale(100%);
+}
+
+.timer {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.gameContainer {
+    position: relative;
+    max-width: 100%;
+    min-width: 1200px;
+}
+
+.notification {
+    position: fixed;
+    background-color: var(--dusty-grape);
+    padding: 10px;
+    font-size: 1.2rem;
+    right: 20px;
+    z-index: 1;
+    animation: fadeIn 3s ease-in-out forwards;
+    border-radius: 10px;
+}
+
+.options {
+    position: absolute;
+    background-color: var(--parchment);
+    color: var(--space-indigo);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.options li {
+    padding: 4px 10px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 10px;
+}
+
+.options li:hover {
+    background-color: var(--almond-silk);
+}
+
+.options img {
+    width: 40px;
+}
+
+.main {
+    width: 100%;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    10% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    90% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}

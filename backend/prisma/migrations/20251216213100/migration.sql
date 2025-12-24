@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "Game" ADD COLUMN     "foundIds" INTEGER[] DEFAULT ARRAY[]::INTEGER[];

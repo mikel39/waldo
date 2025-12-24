@@ -1,0 +1,27 @@
+@font-face {
+    src: url("../assets/fonts/UnifrakturMaguntia-Regular.ttf");
+    font-family: "fraktur";
+}
+
+.bar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    font-family: "fraktur";
+    font-size: 30px;
+    cursor: pointer;
+}
+
+button {
+    background-color: var(--dusty-grape);
+    padding: 8px 16px;
+    border: none;
+    border-radius: 10px;
+    font-size: inherit;
+    color: inherit;
+    font-family: Roboto;
+    font-weight: 600;
+    cursor: pointer;
+}
