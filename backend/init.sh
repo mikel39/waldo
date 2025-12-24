@@ -1,3 +1,4 @@
+cd backend &&
 npm install &&
 npx prisma deploy &&
-node tsx populate.ts
+npm tsx populate.ts
