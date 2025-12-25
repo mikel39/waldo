@@ -12,11 +12,12 @@ interface Props {
 function WinnerPage({ data, setPage }: Props) {
   const [dt, setDt] = useState({ utoken: "", username: "" });
   const { setExecute } = useFetch("user/username", "POST", dt, false);
+  const [hide, setHide] = useState(false);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
       setPage("home");
-    }, 1000 * 10);
+    }, 1000 * 14);
 
     return () => {
       clearTimeout(timeout);
@@ -30,7 +31,7 @@ function WinnerPage({ data, setPage }: Props) {
       utoken: data.user.token,
     }));
     setExecute(true);
-    setPage("home");
+    setHide(true);
   };
 
   return (
@@ -41,7 +42,7 @@ function WinnerPage({ data, setPage }: Props) {
         </p>
         <div className={styles.message}>
           <p>Congratulations!</p>
-          {!data.user.username && (
+          {!data.user.username && !hide && (
             <form onSubmit={handleOnSubmit}>
               <input
                 value={dt.username}

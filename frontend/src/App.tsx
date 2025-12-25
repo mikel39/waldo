@@ -17,7 +17,7 @@ function App() {
   initUser();
 
   if (error) {
-    return <div></div>;
+    return <div>error happened</div>;
   }
 
   if (loading) {
